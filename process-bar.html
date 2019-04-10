@@ -1,0 +1,58 @@
+<!DOCTYPE html>
+<html>
+    <head>
+        
+        <!-- 进度条 -->
+        <style>
+            .process-bar {
+                width: 100px;
+                height: 8px;
+                border-radius: 4px;
+                background-color: lightblue;
+                margin: 0 auto;
+                margin-top: 50px;
+                overflow: hidden;
+                position: relative;
+            }
+            .process-bar span {
+                width: 100px;
+                background-color: lightgreen;
+                height: 8px;
+                border-radius: 4px;
+                position: absolute;
+                animation: process-method-two 2s linear infinite;
+            }
+            /* @keyframes process-method-one {
+                0% {
+                    width: 10px;
+                }
+                50% {
+                    width: 100px;
+                    margin: 0px;
+                }
+                100% {
+                    width: 10px;
+                    margin-left: 90px;
+                }
+            } */
+        
+            @keyframes process-method-two {
+                0% {
+                    transform: translate(-100px);
+                }
+                50% {
+                    transform: translate(0);
+                }
+                100% {
+                    transform: translate(100px);
+                }
+            }
+        </style>
+    </head>
+    <body>
+
+        <div class="process-bar">
+            <span></span>
+        </div>
+    </body>
+</html>

@@ -1,0 +1,105 @@
+<!DOCTYPE html>
+<html>
+    <head>
+        
+        <!-- 竖条纹纵向loading 底部不固定 -->
+        <style>
+            .loading-container {
+                width: 80px;
+                height: 40px;
+                margin: 0 auto;
+                margin-top: 100px;
+            }
+            .loading-container span {
+                display: inline-block;
+                width: 8px;
+                border-radius: 4px;
+                height: 100%;
+                background-color: lightgreen;
+                animation: loading 1s ease infinite;
+            }
+            @keyframes loading {
+                0%, 100% {
+                    height: 100%;
+                }
+                50% {
+                    height: 175%;
+                    margin: -15px 0;
+                    background-color: lightblue;
+                }
+            }
+            .loading-container span:nth-child(2) {
+                animation-delay: 0.2s;
+            }
+            .loading-container span:nth-child(3) {
+                animation-delay: 0.4s;
+            }
+            .loading-container span:nth-child(4) {
+                animation-delay: 0.6s;
+            }
+            .loading-container span:nth-child(5) {
+                animation-delay: 0.8s;
+            }
+
+        </style>
+
+        <!-- 竖条纹固定底部向上延伸 -->
+        <style>
+            .to-up-loading {
+                width: 80px;
+                height: 40px;
+                margin: 0 auto;
+                margin-top: 100px;
+            }
+            .to-up-loading span {
+                display: inline-block;
+                width: 8px;
+                border-radius: 4px;
+                height: 100%;
+                background-color: lightgreen;
+                animation: to-up-loading 1s ease infinite;
+            }
+            @keyframes to-up-loading {
+                0%, 100% {
+                    height: 100%;
+                }
+                50% {
+                    height: 60px;
+                    margin-top: -20px;
+                    background-color: lightblue;
+                }
+            }
+            .to-up-loading span:nth-child(2) {
+                animation-delay: 0.2s;
+            }
+            .to-up-loading span:nth-child(3) {
+                animation-delay: 0.4s;
+            }
+            .to-up-loading span:nth-child(4) {
+                animation-delay: 0.6s;
+            }
+            .to-up-loading span:nth-child(5) {
+                animation-delay: 0.8s;
+            }
+        </style>
+    </head>
+    <body>
+
+        <!-- 竖条纹纵向loading 底部不固定 -->
+        <div class="loading-container">
+            <span></span>
+            <span></span>
+            <span></span>
+            <span></span>
+            <span></span>
+        </div>
+
+        <div class="to-up-loading">
+            <span></span>
+            <span></span>
+            <span></span>
+            <span></span>
+            <span></span>
+        </div>
+    </body>
+</html>

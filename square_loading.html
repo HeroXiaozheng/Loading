@@ -1,0 +1,62 @@
+<!DOCTYPE html>
+<html>
+    <head>
+        
+        <!-- 正方形旋转 -->
+        <style>
+            .square-rotate {
+                width: 160px;
+                height: 40px;
+                margin: 0 auto;
+                margin-top: 100px;
+            }
+            .square-rotate span {
+                width: 16px;
+                height: 16px;
+                display: inline-block;
+                background-color: lightgreen;
+                transform-origin: right bottom;
+                animation: rotateAndFilter 1.04s ease infinite;
+                margin-left: 10px;
+            }
+            @keyframes rotateAndFilter {
+                0% {
+                    opacity: 0.2;
+                    transform: rotate(0);
+                }
+                50% {
+                    opacity: 1;
+                }
+                100% {
+                    opacity: 0.2;
+                    transform: rotate(90deg);
+                }
+            }
+            .square-rotate span:nth-child(1) {
+                animation-delay: 0.13s;
+            }
+            .square-rotate span:nth-child(2) {
+                animation-delay: 0.23s;
+            }
+            .square-rotate span:nth-child(3) {
+                animation-delay: 0.33s;
+            }
+            .square-rotate span:nth-child(4) {
+                animation-delay: 0.43s;
+            }
+            .square-rotate span:nth-child(5) {
+                animation-delay: 0.53s;
+            }
+        </style>
+    </head>
+    <body>
+
+        <div class="square-rotate">
+            <span></span>
+            <span></span>
+            <span></span>
+            <span></span>
+            <span></span>
+        </div>
+    </body>
+</html>

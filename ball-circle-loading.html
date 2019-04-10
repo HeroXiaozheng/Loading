@@ -1,0 +1,110 @@
+<!DOCTYPE html>
+<html>
+    <head>
+        
+    <!-- 球沿圆环旋转---球旋转 -->
+    <style>
+        .ball-rotate {
+            width: 100px;
+            height: 100px;
+            border-radius: 50%;
+            background-color: lightgreen;
+            position: relative;
+            margin: 0 auto;
+            margin-top: 50px;
+            animation: circleChangeColor 1s ease infinite;
+        }
+        .whiteBall {
+            background-color: #fff;
+            width: 90px;
+            height: 90px;
+            border-radius: 50%;
+            position: absolute;
+            bottom: 5px;
+            left: 5px;
+        }
+        .ball {
+            width: 20px;
+            height: 20px;
+            background-color: lightgreen;
+            border-radius: 50%;
+            position: absolute;
+            left: 40px;
+            top: -6px;
+            animation: ballRotate 2s ease infinite;
+            transform-origin: 10px 58px;
+        }
+        @keyframes circleChangeColor {
+            0% {
+                background-color: lightgreen;
+            }
+            100% {
+                background-color: lightblue;
+            }
+        }
+        @keyframes ballRotate {
+            0% {
+                background-color: lightgreen;
+                transform: rotate(0);
+            }
+            100% {
+                background-color: lightblue;
+                transform: rotate(360deg);
+            }
+        }
+    </style>
+
+    <!-- 球沿圆环旋转---整体旋转 -->
+    <style>
+        .circle-rotate {
+            width: 100px;
+            height: 100px;
+            border-radius: 50%;
+            border: 5px solid lightgreen;
+            margin: 0 auto;
+            margin-top: 50px;
+            position: relative;
+            animation: circleRotate 2s ease infinite;
+        }
+        .circle-rotate span {
+            background-color: lightgreen;
+            width: 30px;
+            height: 30px;
+            border-radius: 50%;
+            position: absolute;
+            top: -15px;
+            left: 35px;
+            animation: circleChangeColor 2s ease infinite;
+        }
+        @keyframes circleRotate {
+            0% {
+                border-color: lightgreen; 
+                transform: rotate(0);
+            }
+            100% {
+                border-color: lightblue;
+                transform: rotate(360deg);
+            }
+        }
+        @keyframes circleChangeColor {
+            0% {
+                background-color: lightgreen; 
+            }
+            100% {
+                background-color: lightblue;
+            }
+        }
+    </style>
+    </head>
+    <body>
+
+        <div class="ball-rotate">
+            <span class="whiteBall"></span>
+            <span class="ball"></span>
+        </div>
+
+        <div class="circle-rotate">
+            <span></span>
+        </div>
+    </body>
+</html>

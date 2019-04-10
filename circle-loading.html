@@ -1,0 +1,89 @@
+<!DOCTYPE html>
+<html>
+    <head>
+        
+        <!-- 圆环loading -->
+        <style>
+            .circle-loading {
+                width: 100px;
+                height: 100px;
+                margin: 0 auto;
+                margin-top: 100px;
+                position: relative;
+            }
+            .circle-loading span {
+                width: 16px;
+                height: 16px;
+                position: absolute;
+                background-color: lightgreen;
+                border-radius: 50%;
+                display: inline-block;
+                animation: changeOapcity 1.125s ease infinite;
+            }
+            @keyframes changeOapcity {
+                0% {
+                    opacity: 1;
+                    transform: scale(1.3);
+                }
+                100% {
+                    opacity: 0.2;
+                    transform: scale(0.3);
+                }
+            }
+            .circle-loading span:nth-child(1) {
+                top: calc(50% - 8px);
+                left: 0;
+                animation-delay: 0.125s;
+            }
+            .circle-loading span:nth-child(2) {
+                top: calc(22% - 8px);
+                left: calc(21% - 8px);
+                animation-delay: 0.25s;
+            }
+            .circle-loading span:nth-child(3) {
+                top: calc(78% - 8px);
+                left: calc(21% - 8px);
+                animation-delay: 1.125s;
+            }
+            .circle-loading span:nth-child(4) {
+                top: 0;
+                left: calc(50% - 8px);
+                animation-delay: 0.375s;
+            }
+            .circle-loading span:nth-child(5) {
+                top: calc(100% - 16px);
+                left: calc(50% - 8px);
+                animation-delay: 1s;
+            }
+            .circle-loading span:nth-child(6) {
+                top: calc(21% - 8px);
+                left: calc(80% - 8px);
+                animation-delay: 0.5s;
+            }
+            .circle-loading span:nth-child(7) {
+                top: calc(78% - 8px);
+                left: calc(80% - 8px);
+                animation-delay: 0.875s;
+            }
+            .circle-loading span:nth-child(8) {
+                top: calc(50% - 8px);
+                right: 0;
+                animation-delay: 0.625s;
+            }
+
+        </style>
+    </head>
+    <body>
+
+        <div class="circle-loading">
+            <span></span>
+            <span></span>
+            <span></span>
+            <span></span>
+            <span></span>
+            <span></span>
+            <span></span>
+            <span></span>
+        </div>
+    </body>
+</html>
